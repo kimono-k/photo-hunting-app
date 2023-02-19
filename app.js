@@ -10,7 +10,7 @@ let synth = window.speechSynthesis;
 const image = document.getElementById("output");
 const fileButton = document.getElementById("file");
 const prediction = document.getElementById("prediction");
-const predictionDiv = document.getElementById("prediction-section");
+const predictionSection = document.getElementById("prediction-section");
 const trainButton = document.getElementById("train-button");
 const saveButton = document.getElementById("save-button");
 const loadButton = document.getElementById("load-button");
@@ -28,7 +28,7 @@ function loadFile(event) {
 
       classifier.classify(document.getElementById("output"), (err, results) => {
         console.log(results);
-        predictionDiv.style.display = "block";
+        predictionSection.style.display = "block";
         if (results[0] !== "chihuahua") {
           prediction.innerHTML = `This is not a chihuahua, but a ${results[0].label}`;
           speak(results[0].label);

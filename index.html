@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <title>Photo Hunting App</title>
+  </head>
+  <body>
+    <header id="header-division">
+      <h1>Photo Hunting App</h1>
+    </header>
+
+    <main>
+      <section id="upload-image-section">
+        <label for="file">Upload Image</label>
+        <input type="file" accept="image/*;capture=camera" id="file" />
+      </section>
+
+      <section id="output-image-section">
+        <span id="text-field"></p>
+        <img id="output" width="400" />
+      </section>
+
+      <section id="prediction-section">
+         <button id="prediction">Start guessing!</button><br />  
+      </section>
+
+      <section id="model-section">
+        <button id="train-button">Train</button>
+        <button id="save-button">Save</button>
+        <button id="load-button">Load</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
